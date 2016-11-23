@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bt_info_layoutview"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryBackground">
+
+    <com.broadsense.newpine.bluetooth.ui.widget.WaveView
+        android:id="@+id/v_wave"
+        android:layout_width="100px"
+        android:layout_height="100px"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="27px"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/info_tip"
+        android:layout_marginTop="154px"
+        android:layout_marginLeft="@dimen/self_info_tip_margin_left"
+        android:textSize="@dimen/self_info_tip_size"
+        android:textColor="@color/colorPrimaryTextDark"/>
+
+    <EditText
+        android:id="@+id/bt_info_edit"
+        android:layout_width="600px"
+        android:layout_height="60px"
+        android:layout_marginTop="196px"
+        android:background="@drawable/edittext_bg"
+        android:textSize="@dimen/communicate_status_text_size"
+        android:text="@string/device_name"
+        android:textColor="@color/set_info_edit_text"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:enabled="false"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="192px"
+        android:layout_height="56px"
+        android:background="@drawable/btn_cancel_bg"
+        android:text="@string/bt_info_btn_text"
+        android:textColor="@color/set_info_edit_text"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="36px"/>
+
+
+</RelativeLayout>

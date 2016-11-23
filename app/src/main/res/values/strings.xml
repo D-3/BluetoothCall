@@ -1,0 +1,70 @@
+<resources>
+    <string name="app_name">蓝牙电话</string>\
+
+    <string name="my_bluetooth_name">我的蓝牙</string>
+
+    <string name="keypad_1">1</string>
+    <string name="keypad_2">2</string>
+    <string name="keypad_3">3</string>
+    <string name="keypad_4">4</string>
+    <string name="keypad_5">5</string>
+    <string name="keypad_6">6</string>
+    <string name="keypad_7">7</string>
+    <string name="keypad_8">8</string>
+    <string name="keypad_9">9</string>
+    <string name="keypad_0">0+</string>
+    <string name="keypad_zero">0</string>
+    <string name="keypad_asterisk">*</string>
+    <string name="keypad_number_sign">#</string>
+
+    <string name="settings_name">蓝牙电话设置</string>
+    <string name="bluetooth_off_text">开启蓝牙后，您的设备可以和附近的其他的蓝牙设备进行连接</string>
+    <string name="bluetooth_empty_text">开启蓝牙后，您的设备 Boomtech 就可以和附近的其他蓝牙设备连接</string>
+    <string name="bluetooth_mate_text">已配对设备</string>
+    <string name="bluetooth_valid_text">可连接设备</string>
+    <string name="bluetooth_on_text">开启蓝牙后，附近的设备即可检测到您的设备</string>
+    <string name="bluetooth_search_text">正在搜索</string>
+    <string name="bluetooth_close_text">正在关闭</string>
+    <string name="bluetooth_not_connect">未连接蓝牙，是否去连接</string>
+
+    <string name="bluetooth_data_loading">正在同步数据</string>
+    <string name="bluetooth_call_log_no_data">无通话记录</string>
+    <string name="bluetooth_contact_no_data">无联系人</string>
+
+    <string name="dialog_cancel_button_text">取消</string>
+    <string name="dialog_ok_button_text">确定</string>
+
+    <string name="Page_Title_0">通话记录</string>
+    <string name="Page_Title_1">联系人</string>
+    <string name="Page_Title_2">拨号</string>
+
+    <string name="bluetooth_no_connect_name">未连接</string>
+
+    <string name="call_log_empty_tips">同步失败，请重试！</string>
+    <string name="call_contact_empty_tips">同步失败，请重试！</string>
+    <string name="retry">再试一次</string>
+
+    <string name="dilogg_Title">警告</string>
+
+    <string name="btn_comfirm">确定</string>
+    <string name="btn_cancel">取消</string>
+
+    <string name="error_tips">很抱歉,程序出现异常,即将退出!</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="new_call">又来了一个电话</string>
+    <string name="income">来电</string>
+    <string name="synchronize_ok">同步完成！</string>
+    <string name="synchronize_error">同步异常，正在重试</string>
+    <string name="empty_devices_tip">没有已配对蓝牙设备，请添加设备</string>
+    <string name="add_device">添加</string>
+    <string name="info_tip">请在使用蓝牙电话前，用手机搜索并连接本设备</string>
+    <string name="bt_info_btn_text">取消</string>
+    <string name="bt_list_title">已配对设备</string>
+    <string name="del_device">删除</string>
+    <string name="set_connecting_insert_new_devices_tip">添加新设备前，需要断开当前的蓝牙连接，是否继续</string>
+    <string name="add_blue_device">添加蓝牙设备</string>
+    <string name="pair_list">已配对设备</string>
+    <string name="device_name">设备名称：4G智能后视镜-蓝牙电话</string>
+</resources>

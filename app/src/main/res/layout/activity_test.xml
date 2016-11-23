@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 来电 -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryBackground"
+    android:orientation="vertical"
+    tools:context="com.broadsense.newpine.bluetooth.ui.activity.TestActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_set_discover"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="设置可见"/>
+
+        <EditText
+            android:id="@+id/et_cmd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/btn_send_cmd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发送指令"/>
+
+        <EditText
+            android:id="@+id/et_address"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+        <!--<Button
+            android:id="@+id/btn_disc_hf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="断开HFP"/>
+
+        <Button
+            android:id="@+id/btn_disc_pbc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="断开PBC"/>
+
+        <Button
+            android:id="@+id/btn_disc_a2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="断开A2DP"/>-->
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,45 @@
+
+
+buildscript {
+  repositories {
+    mavenCentral()
+  }
+}
+
+apply plugin: 'com.android.library'
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  compile project(':leakcanary-analyzer')
+  compile 'com.android.support:support-v4:24.2.1'
+  compile 'com.android.support:appcompat-v7:23.0.0'
+}
+
+def gitSha() {
+  return 'git rev-parse --short HEAD'.execute().text.trim()
+}
+
+android {
+  resourcePrefix 'leak_canary_'
+  compileSdkVersion 24
+  buildToolsVersion "24.0.0"
+  resourcePrefix ""
+  defaultConfig {
+    minSdkVersion 21
+    targetSdkVersion 23
+    versionCode 1
+    versionName "1.0"
+
+  }
+  lintOptions {
+    disable 'GoogleAppIndexingWarning'
+  }
+}
+
+task sourceJar(type: Jar) {
+  from 'src/main/java'
+}
+

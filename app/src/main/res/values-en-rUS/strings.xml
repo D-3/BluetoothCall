@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BluetoothCall</string>
+
+    <string name="my_bluetooth_name">My Bluetooth</string>
+
+    <string name="keypad_1">1</string>
+    <string name="keypad_2">2</string>
+    <string name="keypad_3">3</string>
+    <string name="keypad_4">4</string>
+    <string name="keypad_5">5</string>
+    <string name="keypad_6">6</string>
+    <string name="keypad_7">7</string>
+    <string name="keypad_8">8</string>
+    <string name="keypad_9">9</string>
+    <string name="keypad_0">0+</string>
+    <string name="keypad_zero">0</string>
+    <string name="keypad_asterisk">*</string>
+    <string name="keypad_number_sign">#</string>
+
+    <string name="settings_name">Bluetooth</string>
+    <string name="bluetooth_off_text">Open your device will make it visible to other devices nearby</string>
+    <string name="bluetooth_empty_text">No Bluetooth devices were found nearby</string>
+    <string name="bluetooth_mate_text">Paired Bluetooth device</string>
+    <string name="bluetooth_valid_text">Bluetooth device can be paired</string>
+    <string name="bluetooth_on_text">Open your device will make it visible to other devices nearby</string>
+    <string name="bluetooth_search_text">Searching</string>
+    <string name="bluetooth_close_text">Closing</string>
+    <string name="bluetooth_not_connect">未连接蓝牙，是否去连接</string>
+
+    <string name="dialog_cancel_button_text">Cancel</string>
+    <string name="dialog_ok_button_text">OK</string>
+
+
+    <string name="Page_Title_0">Call Records</string>
+    <string name="Page_Title_1">Contacts</string>
+    <string name="Page_Title_2">Dialer</string>
+</resources>

@@ -1,0 +1,71 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+    </style>
+
+    <style name="AppTheme.NoActionBar" parent="Theme.AppCompat">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.NoBar">
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    
+    <!-- tab样式 -->
+    <style name="MainTabLayout" parent="Widget.Design.TabLayout">
+        <item name="android:background">@color/colorTabBarBackground</item>
+        <item name="tabSelectedTextColor">@color/colorTabTextSelect</item>
+        <item name="tabIndicatorHeight">@dimen/tab_indicator_height</item>
+        <item name="tabGravity">fill</item>
+    </style>
+
+    <!-- tab文字大小 -->
+    <style name="TabLayoutText" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">@dimen/tab_text_size</item>
+        <item name="android:textColor">@color/colorTabText</item>
+    </style>
+
+    <!-- 拨号键盘样式 -->
+    <style name="DialNumberTextView">
+        <item name="android:layout_marginRight">@dimen/divider_height</item>
+        <item name="android:background">@color/colorPrimaryBackground</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/keypad_text_size</item>
+        <item name="android:layout_width">@dimen/keypad_view_width</item>
+        <item name="android:layout_height">@dimen/keypad_view_height</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+    <!-- 分割线 -->
+    <style name="KeypadDivider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/divider_height</item>
+        <item name="android:background">@color/colorDivider</item>
+    </style>
+    
+    <!-- dialog -->
+    <style name="CustomDialog" parent="Animation.AppCompat.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <!--CheckBox-->
+    <style name="CustomCheckboxTheme" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/bt_list_ltem_checkbox_style</item>
+        <item name="android:scaleType">fitCenter</item>
+    </style>
+</resources>

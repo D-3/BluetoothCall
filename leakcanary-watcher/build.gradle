@@ -1,0 +1,52 @@
+
+
+buildscript {
+  repositories {
+    mavenCentral()
+  }
+}
+
+apply plugin: 'com.android.library'
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  testCompile 'junit:junit:4.12'
+}
+
+android.libraryVariants.all { variant ->
+  def name = variant.buildType.name
+  if (name.equals(com.android.builder.core.BuilderConstants.DEBUG)) {
+    return; // Skip debug builds.
+  }
+  def task = project.tasks.create "jar${name.capitalize()}", Jar
+  task.dependsOn variant.javaCompile
+  task.from variant.javaCompile.destinationDir
+  artifacts.add('archives', task);
+}
+
+android {
+  compileSdkVersion 24
+  buildToolsVersion "24.0.0"
+  resourcePrefix ""
+  defaultConfig {
+    minSdkVersion 21
+    targetSdkVersion 23
+    versionCode 1
+    versionName "1.0"
+
+  }
+  dexOptions {
+    javaMaxHeapSize '2048M'
+  }
+  lintOptions {
+    disable 'GoogleAppIndexingWarning'
+  }
+}
+
+task sourceJar(type: Jar) {
+  from 'src/main/java'
+}
+

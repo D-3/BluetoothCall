@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/empty_layout_layout_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryBackground"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/empty_devices_tip"
+        android:textColor="@color/colorPrimaryTextDark"
+        android:textSize="@dimen/empty_devices_tip_size" />
+
+    <Button
+        android:id="@+id/btn_add_device"
+        android:layout_width="192px"
+        android:layout_height="56px"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="100px"
+        android:background="@drawable/btn_ok_normal"
+        android:text="@string/add_device"
+        android:textColor="@color/colorTabTextSelect" />
+
+</RelativeLayout>

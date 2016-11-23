@@ -1,0 +1,83 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="dark_hint_text_size">24px</dimen>
+
+    <dimen name="status_bar_height">54px</dimen>
+    <dimen name="bluetooth_name_size">24px</dimen>
+    <dimen name="signal_image_width">43px</dimen>
+    <dimen name="signal_image_height">22px</dimen>
+    <dimen name="battery_image_width">43px</dimen>
+    <dimen name="battery_image_height">22px</dimen>
+    <dimen name="setting_image_width">32px</dimen>
+    <dimen name="setting_image_height">32px</dimen>
+
+    <dimen name="tab_text_size">28px</dimen>
+    <dimen name="tab_indicator_height">0px</dimen>
+    <dimen name="divider_height">1px</dimen>
+    <dimen name="phone_number_size">26px</dimen>
+    <dimen name="call_time_size">22px</dimen>
+    <dimen name="icon_head_parent">84px</dimen>
+    <dimen name="icon_head">54px</dimen>
+    <dimen name="icon_call_parent">84px</dimen>
+    <dimen name="icon_call">54px</dimen>
+
+    <dimen name="dial_right_view_width">293px</dimen>
+    <dimen name="call_button_width">240px</dimen>
+    <dimen name="call_button_height">120px</dimen>
+    <dimen name="call_log_status_size">15px</dimen>
+    <dimen name="keypad_text_size">48px</dimen>
+    <dimen name="keypad_view_width">186px</dimen>
+    <dimen name="keypad_view_height">90px</dimen>
+    <dimen name="input_view_width">270px</dimen>
+    <dimen name="input_text_size">32px</dimen>
+    <dimen name="delete_image_view_width">44px</dimen>
+    <dimen name="delete_image_view_height">26px</dimen>
+
+    <dimen name="settings_bar_height">64px</dimen>
+    <dimen name="settings_name_size">28px</dimen>
+    <dimen name="settings_bluetooth_text_view_height">54px</dimen>
+    <dimen name="setting_bluetooth_dark_text_size">22px</dimen>
+    <dimen name="settings_bluetooth_rest_view_height">48px</dimen>
+    <dimen name="settings_bluetooth_search_bar_size">40px</dimen>
+    <dimen name="settings_bluetooth_close_bar_size">40px</dimen>
+
+    <dimen name="dialog_width">456px</dimen>
+    <dimen name="dialog_info_text_width">384px</dimen>
+    <dimen name="dialog_info_text_size">28px</dimen>
+    <dimen name="dialog_button_width">180px</dimen>
+    <dimen name="dialog_button_height">54px</dimen>
+    <dimen name="dialog_button_text_size">24px</dimen>
+    <dimen name="dialog_head_view_height">48px</dimen>
+    <dimen name="dialog_middle_view_height">60px</dimen>
+    <dimen name="dialog_rest_view_height">30px</dimen>
+
+    <dimen name="communicate_name_text_size">40px</dimen>
+    <dimen name="communicate_location_text_size">30px</dimen>
+    <dimen name="communicate_status_text_size">24px</dimen>
+    <dimen name="communicate_status_text_height">36px</dimen>
+    <dimen name="communicate_status_text_width">150px</dimen>
+    <dimen name="communicate_image_button_width">228px</dimen>
+    <dimen name="communicate_image_button_height">72px</dimen>
+    <dimen name="communicate_head_view_height">84px</dimen>
+    <dimen name="communicate_rest_view_height">78px</dimen>
+    <dimen name="new_call_title_text_size">60px</dimen>
+
+    <dimen name="switch_height">33px</dimen>
+    <dimen name="switch_width">66px</dimen>
+
+    <dimen name="bluetooth_item_height">78px</dimen>
+    <dimen name="bluetooth_item_icon_height">26px</dimen>
+    <dimen name="bluetooth_item_icon_width">20px</dimen>
+    <dimen name="bluetooth_item_text_size">26px</dimen>
+    <dimen name="bluetooth_item_title_height">54px</dimen>
+
+    <dimen name="empty_devices_tip_size">24px</dimen>
+    <dimen name="self_info_tip_size">22px</dimen>
+    <dimen name="self_info_tip_margin_left">128px</dimen>
+
+
+</resources>

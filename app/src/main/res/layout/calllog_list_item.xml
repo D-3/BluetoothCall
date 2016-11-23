@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 通话记录item -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryBackground">
+
+    <!-- 联系人头像 -->
+    <RelativeLayout
+        android:layout_width="@dimen/icon_head_parent"
+        android:layout_height="@dimen/icon_head_parent">
+        <ImageView
+            android:id="@+id/call_log_item_head"
+            android:layout_width="@dimen/icon_head"
+            android:layout_height="@dimen/icon_head"
+            android:src="@drawable/ico_portrait"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <!-- 联系人姓名 -->
+    <TextView
+        android:id="@+id/call_log_item_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/phone_number_size"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/icon_head_parent" />
+
+    <!-- 通话记录的通话时间 -->
+    <TextView
+        android:id="@+id/call_log_item_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/call_time_size"
+        android:textColor="@color/colorPrimaryTextDark"
+        android:layout_centerInParent="true"/>
+
+    <!-- 通话状态的图片 -->
+    <ImageView
+        android:layout_width="@dimen/call_log_status_size"
+        android:layout_height="@dimen/call_log_status_size"
+        android:id="@+id/call_log_status_Image"
+        android:layout_marginLeft="8px"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/call_log_item_time" />
+
+    <!-- 拨打电话按钮 -->
+    <RelativeLayout
+        android:layout_width="@dimen/icon_call_parent"
+        android:layout_height="@dimen/icon_call_parent"
+        android:layout_marginEnd="57px"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true">
+        <ImageView
+            android:id="@+id/call_log_item_call"
+            android:layout_width="@dimen/icon_call"
+            android:layout_height="@dimen/icon_call"
+            android:background="@drawable/call_icon"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+</RelativeLayout>

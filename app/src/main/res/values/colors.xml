@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#2196F3</color>
+
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+
+    <color name="colorDivider">#292b2e</color>
+    <color name="colorPrimaryBackground">#1f2224</color>
+    <color name="colorPrimaryTextDark">#6a6c72</color>
+
+    <color name="colorStatusBarBackground">#1a1a1a</color>
+    <color name="colorTabBarBackground">#282C2E</color>
+    <color name="colorTabText">#b2b6bf</color>
+    <color name="colorTabTextSelect">#1463ce</color>
+
+    <color name="colorSettingsBarBackground">#282C2E</color>
+
+    <color name="colorDialogBackground">#a5a5a5</color>
+    <color name="colorDialogCancelTextNormal">#666666</color>
+    <color name="colorDialogCancelTextPressed">#404040</color>
+
+    <color name="set_info_edit_text">#bfbfbf</color>
+    <color name="cut_off_line_color">#2e3034</color>
+    <color name="bt_list_del_color">#ce1414</color>
+    <color name="bt_list_item_text_color">#f2f2f2</color>
+
+    <color name="colorCallType">#6996cf</color>
+    <color name="colorNewCall">#00ff00</color>
+
+</resources>

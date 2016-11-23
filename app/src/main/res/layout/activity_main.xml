@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 蓝牙电话主界面 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="com.broadsense.newpine.bluetooth.ui.activity.MainActivity">
+
+    <!-- 状态栏 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/status_bar_height"
+        android:id="@+id/status_layout"
+        android:background="@color/colorStatusBarBackground">
+        <TextView
+            android:id="@+id/bluetooth_name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/my_bluetooth_name"
+            android:textSize="@dimen/bluetooth_name_size"
+            android:textColor="@color/colorWhite"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20px"/>
+
+        <!--<Button
+            android:id="@+id/btn_test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="打开指令界面"/>-->
+
+        <!--<ImageView
+            android:id="@+id/bluetooth_signal_image"
+            android:layout_width="@dimen/signal_image_width"
+            android:layout_height="@dimen/signal_image_height"
+            android:src="@drawable/bluet_signal_5"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/bluetooth_name_text"
+            android:layout_marginStart="20px" />-->
+
+        <!--<ImageView
+            android:id="@+id/battery_image"
+            android:layout_width="@dimen/battery_image_width"
+            android:layout_height="@dimen/battery_image_height"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/bluetooth_signal_image"
+            android:layout_marginStart="20px"
+            android:src="@drawable/electricity_100"/>-->
+
+        <ImageButton
+            android:id="@+id/setting_button"
+            android:layout_width="@dimen/setting_image_width"
+            android:layout_height="@dimen/setting_image_height"
+            android:background="@drawable/ico_bluetooth_set"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="30px" />
+    </RelativeLayout>
+
+    <!-- 标题栏 -->
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabTextAppearance="@style/TabLayoutText"
+            style="@style/MainTabLayout" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <!-- 主界面内容显示 -->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+</LinearLayout>

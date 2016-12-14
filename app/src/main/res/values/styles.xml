@@ -14,9 +14,10 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="AppTheme.NoBar">
+    <style name="AppTheme.NoTitleBar">
         <item name="windowNoTitle">true</item>
         <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@null</item>
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />

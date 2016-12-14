@@ -18,8 +18,6 @@ public class BluetoothManager {
 
     private ArrayList<BluetoothDevice> mPairedBluetoothDevices;
     private BluetoothDevice mPendingConnectDevice;
-//    private ArrayList<BluetoothDevice> mPendingDelDevices;
-//    private boolean delDeviceSuccess = true;
 
     private static BluetoothManager S_BLUETOOTH_MANAGER = new BluetoothManager();
 
@@ -29,7 +27,6 @@ public class BluetoothManager {
 
     private BluetoothManager(){
         mPairedBluetoothDevices = new ArrayList<BluetoothDevice>();
-//        mPendingDelDevices = new ArrayList<BluetoothDevice>();
     }
 
     public BluetoothDevice getConnectedDevice(){
@@ -83,103 +80,6 @@ public class BluetoothManager {
         }
     }
 
-//    public void downloadContact(){
-//        ExtBtApp.getmExternalBluetoothManager().sendCommand("PBCPULLPB 1,1,0,0");
-//        EventBus.getDefault().post(new BluetoothEvent(BluetoothEvent.EVENT_DOWNLOADING_CONTACT));
-//    }
-//
-//    public void downloadCallLog(){
-//        ExtBtApp.getmExternalBluetoothManager().sendCommand("PBCPULLPB 1,1,0,0");
-//        EventBus.getDefault().post(new BluetoothEvent(BluetoothEvent.EVENT_DOWNLOADING_CALLLOG));
-//    }
-
-//    private void removePairdDevice(String address){
-//        for (BluetoothDevice bluetoothDevice : mPairedBluetoothDevices){
-//            if(bluetoothDevice.getAddress().equals(address)){
-//                mPendingDelDevices.remove(bluetoothDevice);
-//            }
-//        }
-//    }
-
-//    public void deleteDevice(ArrayList<BluetoothDevice> devices){
-//        mPendingDelDevices.addAll(devices);
-//        delDeviceSuccess = true;
-//        if(mPendingDelDevices.size() > 0){
-//            if(isConnetedDevInPendingDelList()){
-//                getConnectedDevice().disconnect();
-//            }else{
-//                startDeleteDevice();
-//            }
-//        }
-//    }
-
-//    public void onDeleteDeviceSuccess(String address){
-//        removePendingDelDevice(address);
-//        removePairdDevice(address);
-//        if(mPendingDelDevices.size() > 0){
-//            startDeleteDevice();
-//        }else{
-//            if(delDeviceSuccess){
-//                EventBus.getDefault().post(new BluetoothEvent(BluetoothEvent.EVENT_DEPAIR_SUCCESS));
-//            }else{
-//                EventBus.getDefault().post(new BluetoothEvent(BluetoothEvent.EVENT_DEPAIR_FAIL));
-//            }
-//        }
-//    }
-
-//    private void removePendingDelDevice(String address){
-//        for (BluetoothDevice bluetoothDevice: mPendingDelDevices){
-//            if(bluetoothDevice.getAddress().equals(address)){
-//                mPendingDelDevices.remove(bluetoothDevice);
-//            }
-//        }
-//    }
-
-//    public void onDeleteDevice(boolean success, String address){
-//        if(success){
-//            removePairdDevice(address);
-//        }
-//        delDeviceSuccess = success && delDeviceSuccess;
-//
-//        removePendingDelDevice(address);
-//        if(mPendingDelDevices.size() > 0){
-//            startDeleteDevice();
-//        }else{
-//            if(delDeviceSuccess){
-//                EventBus.getDefault().post(new BluetoothEvent(BluetoothEvent.EVENT_DEPAIR_SUCCESS));
-//            }else{
-//                EventBus.getDefault().post(new BluetoothEvent(BluetoothEvent.EVENT_DEPAIR_FAIL));
-//            }
-//        }
-//    }
-
-//    public void startDeleteDevice(){
-//        if(mPendingDelDevices.size() > 0){
-//            ExtBtApp.getmExternalBluetoothManager().sendCommand("DPRD " + mPendingDelDevices.get(0).getAddress());
-//        }
-//    }
-
-//    private boolean isConnetedDevInPendingDelList(){
-//        for(BluetoothDevice bluetoothDevice : mPendingDelDevices){
-//            if (bluetoothDevice.isConnected()){
-//                return true;
-//            }
-//        }
-//        return false;
-//    }
-
-//    public void disconnectDevice(BluetoothDevice bluetoothDevice){
-//        if(bluetoothDevice != null){
-//            bluetoothDevice.disconnect();
-//        }
-//    }
-
-//    public void connectDevice(BluetoothDevice bluetoothDevice){
-//        if(bluetoothDevice != null){
-//            bluetoothDevice.connect();
-//        }
-//    }
-
     public void updateDevice(String address, String name){
         LogUtils.d(TAG, "updateDevice address=" + address + " name=" + name);
         BluetoothDevice device = getDevice(address);
@@ -197,9 +97,5 @@ public class BluetoothManager {
     public BluetoothDevice getPendingConnectDevice(){
         return mPendingConnectDevice;
     }
-
-//    public ArrayList<BluetoothDevice> getPendingDelDevices(){
-//        return mPendingDelDevices;
-//    }
 
 }

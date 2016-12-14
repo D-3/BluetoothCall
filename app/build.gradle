@@ -1,5 +1,9 @@
 apply plugin: 'com.android.application'
 
+def releaseTime() {
+    return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("UTC"))
+}
+
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.3"
@@ -8,13 +12,24 @@ android {
         applicationId "com.broadsense.newpine.bluetooth"
         minSdkVersion 23
         targetSdkVersion 23
-        versionCode 101051
-        versionName "1.01.051"
+        versionCode 101052
+        versionName "1.01.052"
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    //重新命名生成的APK名字
+    applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            def outputFile = output.outputFile
+            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                def fileName = "newPine_BluetoothCall5inch_${defaultConfig.versionName}-${releaseTime() }.apk"
+                output.outputFile = new File(outputFile.parent, fileName)
+            }
         }
     }
 }
@@ -41,7 +56,6 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.1.1'
     compile 'com.android.support:design:23.1.1'
     compile 'org.greenrobot:eventbus:3.0.0'
-    compile 'com.google.android.gms:play-services-appindexing:8.4.0'
 
 //    debugCompile project(':leakcanary-android')
 //    releaseCompile project(':leakcanary-android-no-op');

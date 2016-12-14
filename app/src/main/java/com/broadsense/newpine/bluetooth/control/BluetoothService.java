@@ -32,30 +32,6 @@ public class BluetoothService extends Service {
 
     private static Context mContext;
 
-//    public static String connectbd = "";
-//    public static String connectname = "未连接";
-//    public static boolean answerflag = false;
-//    public static boolean contactflag = false;
-//
-//    private static boolean PBAP_FLAG = false;
-//    private static boolean HFP_FLAG = false;
-//
-//    public static int SYNCHRONIZED_FLAG = 0;
-//    public static int SYNCHRONIZED_SUSPEND = 0;
-//    public static int SYNCHRONIZED_TELBOOKSIZE = 1;
-//    public static int SYNCHRONIZED_TELBOOK = 2;
-//    public static int SYNCHRONIZED_INCOMINGSIZE = 3;
-//    public static int SYNCHRONIZED_INCOMING = 4;
-//    public static int SYNCHRONIZED_OUTGOINGSIZE = 5;
-//    public static int SYNCHRONIZED_OUTGOING = 6;
-//    public static int SYNCHRONIZED_MISSEDSIZE = 7;
-//    public static int SYNCHRONIZED_MISSED = 8;
-//    public static int SYNCHRONIZED_COMPLETE = 9;
-//
-//    private static ArrayList<Contact> contactValueArrayList = new ArrayList<>();
-//    private static ArrayList<CallLog> callRecordValueArrayList = new ArrayList<>();
-
-
     @Override
     public IBinder onBind(Intent intent) {
         return null;
@@ -63,8 +39,6 @@ public class BluetoothService extends Service {
 
     @Override
     public void onCreate() {
-//        mContext = getApplicationContext();
-//        connectHandler.sendEmptyMessage(0);
         bindLauncher();
 
         LogUtils.e("registerReceiver   EXTERNAL_BLUETOOTH");
@@ -108,7 +82,7 @@ public class BluetoothService extends Service {
         public void onReceive(Context context, Intent intent) {
             if(intent != null && intent.getStringExtra("result") != null){
                 String result = intent.getStringExtra("result");
-                LogUtils.i("receiver:" + result);
+                LogUtils.e("receiver:" + result);
 
                 if(result != null){
 
@@ -127,6 +101,7 @@ public class BluetoothService extends Service {
                             //获取设备名
 //                        ExtBtApp.getmExternalBluetoothManager().sendCommand("GRDN " + data[1]);
                         }
+
                         //配对失败
                         else{
                             if(BluetoothManager.getInstance().getPendingConnectDevice() != null
@@ -237,31 +212,11 @@ public class BluetoothService extends Service {
         }
     };
 
-
-
     IWorkService mIWorkService;
     MyConn conn;
 
     private static final int ISWORKING = 0;
     private static final int ISSTOPED = 1;
-
-//    Handler connectHandler = new Handler() {
-//        @Override
-//        public void handleMessage(Message msg) {
-//            super.handleMessage(msg);
-//            Intent intent = new Intent();
-//            intent.setAction("com.service.workservice.REMOTE");
-//            Intent imintent = createExplicitFromImplicitIntent(BluetoothService.this, intent);
-//            if (imintent != null) {
-//                Intent connectintent = new Intent(imintent);
-//                conn = new MyConn();
-//                bindService(connectintent, conn, BIND_AUTO_CREATE);
-//            } else {
-//                connectHandler.sendEmptyMessageDelayed(0, 2000);
-//            }
-//        }
-//    };
-
 
     private void bindLauncher(){
         Intent intent = new Intent();

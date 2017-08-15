@@ -131,7 +131,10 @@ public class PBAProfile extends StateMachine implements Profile {
     public void onEvent(String response) {
         LogUtils.d(TAG,  mBluetoothDevice.getName() + " onEvent " + response);
 
-        if (TextUtils.isEmpty(response)) return;
+        if (TextUtils.isEmpty(response)
+                // 当手机没有允许共享通话记录、联系人的时候，会返回这个错误的指令，忽略它否则导致连接状态陷入混乱
+                || response.equals("AT-B PBCCONN 1,000000000000")) return;
+
         //断开连接时取消监听
         if (response.contains("AT-B PBCSTAT 5")) {
             unregeisterAtResponseListener();
@@ -246,7 +249,8 @@ public class PBAProfile extends StateMachine implements Profile {
 
             resetDownloadTasks();
 
-            mBluetoothDevice.onProfileStateChange();
+            // 防止陷入 ready -
+//            mBluetoothDevice.onProfileStateChange();
 
             super.enter();
         }
@@ -297,6 +301,9 @@ public class PBAProfile extends StateMachine implements Profile {
                 //连接失败
                 else if(response.contains("AT-B PBCCONN 1")){
                     transitionTo(readyState);
+                    //通知获取联系人，通话记录失败
+                    EventBus.getDefault().post(new BluetoothEvent(BluetoothEvent.EVENT_DOWNLOAD_CONTACT_FAIL));
+                    EventBus.getDefault().post(new BluetoothEvent(BluetoothEvent.EVENT_DOWNLOAD_CALLLOG_FAIL));
                 }
             }
             return super.processMessage(msg);
